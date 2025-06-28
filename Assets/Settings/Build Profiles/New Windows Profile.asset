@@ -19,9 +19,7 @@ MonoBehaviour:
   m_PlatformBuildProfile:
     rid: 2152496353939554376
   m_OverrideGlobalSceneList: 1
-  m_Scenes:
-  - m_enabled: 1
-    m_path: Assets/Scenes/SampleScene.unity
+  m_Scenes: []
   m_ScriptingDefines: []
   m_PlayerSettingsYaml:
     m_Settings:
@@ -36,8 +34,8 @@ MonoBehaviour:
     - line: '|   targetDevice: 2'
     - line: '|   useOnDemandResources: 0'
     - line: '|   accelerometerFrequency: 60'
-    - line: '|   companyName: Battle Of Titan'
-    - line: '|   productName: BATTLE OF TITANS'
+    - line: '|   companyName: Hero Survival'
+    - line: '|   productName: Hero Survival'
     - line: '|   defaultCursor: {instanceID: 0}'
     - line: '|   cursorHotspot: {x: 0, y: 0}'
     - line: '|   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b:
@@ -320,7 +318,7 @@ MonoBehaviour:
     - line: '|   - m_BuildTarget: '
     - line: '|     m_Icons:'
     - line: '|     - serializedVersion: 2'
-    - line: '|       m_Icon: {fileID: 2800000, guid: 8cf32bb594965f3449d71aab39ee30ad,
+    - line: '|       m_Icon: {fileID: 2800000, guid: 7a24e6e023ac12e4fb9a1054d1bf45b8,
         type: 3}'
     - line: '|       m_Width: 128'
     - line: '|       m_Height: 128'

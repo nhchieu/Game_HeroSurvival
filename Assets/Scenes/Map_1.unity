@@ -143640,6 +143640,7 @@ MonoBehaviour:
   Spawner: {fileID: 1290033688}
   transitionAnim: {fileID: 2022821531}
   gate: {fileID: 824681787}
+  hud: {fileID: 156471179}
   level: 0
   kill: 0
   exp: 0
@@ -143953,7 +143954,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1313242458
 RectTransform:
   m_ObjectHideFlags: 0

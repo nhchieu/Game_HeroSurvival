@@ -6,10 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/nemuUi.unity
+    guid: 8131aa2165a50dd40b73b56009914119
+  - enabled: 1
+    path: Assets/Scenes/Map_1.unity
     guid: 131a89a7d304fd744841d82121fc628e
   - enabled: 1
-    path: Assets/Scenes/SampleScene1.unity
+    path: Assets/Scenes/Map_2.unity
     guid: 082188d021e5f35429ed188e3dacfd8a
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

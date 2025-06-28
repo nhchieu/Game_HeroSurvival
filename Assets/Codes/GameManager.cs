@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] public Spawner Spawner;
     [SerializeField] public Animator transitionAnim;
     [SerializeField] public GameObject gate;
+    [SerializeField] public GameObject hud;
     [Header("# Player Info")]
     public int level;
     public int kill;
@@ -33,7 +34,12 @@ public class GameManager : MonoBehaviour
     {
         instance = this;
         AudioManager.instance.BgmOn(0, bgmMenuVolume);
-        
+        hud.SetActive(true);
+        isLive = true;
+        player.Health = player.maxHealth;
+        uilevelUp.Select(1);
+        Time.timeScale = 1;
+        AudioManager.instance.BgmOn(1, bgmBattleVolume);
     }
     
     private void Start()
@@ -101,13 +107,9 @@ public class GameManager : MonoBehaviour
         isLive = true;
         Time.timeScale = 1;
     }
-    public void GameStart()
+    public void GameStart(int a)
     {
-        isLive = true;
-        player.Health = player.maxHealth;
-        uilevelUp.Select(1);
-        Time.timeScale = 1;
-        AudioManager.instance.BgmOn(1, bgmBattleVolume);
+        SceneManager.LoadScene(a);
     }
     
     public void GameRetry()
