@@ -34,12 +34,7 @@ public class GameManager : MonoBehaviour
     {
         instance = this;
         AudioManager.instance.BgmOn(0, bgmMenuVolume);
-        hud.SetActive(true);
-        isLive = true;
-        player.Health = player.maxHealth;
-        uilevelUp.Select(1);
-        Time.timeScale = 1;
-        AudioManager.instance.BgmOn(1, bgmBattleVolume);
+        
     }
     
     private void Start()
@@ -109,7 +104,11 @@ public class GameManager : MonoBehaviour
     }
     public void GameStart(int a)
     {
-        SceneManager.LoadScene(a);
+        isLive = true;
+        player.Health = player.maxHealth;
+        uilevelUp.Select(1);
+        Time.timeScale = 1;
+        AudioManager.instance.BgmOn(1, bgmBattleVolume);
     }
     
     public void GameRetry()
@@ -120,6 +119,7 @@ public class GameManager : MonoBehaviour
     
     public void GameWin()
     {
+        boss.HealthBar.gameObject.SetActive(false);
         StartCoroutine(GameWinRoutine());
     }
     IEnumerator GameWinRoutine()
@@ -135,6 +135,7 @@ public class GameManager : MonoBehaviour
     }
     public void GameOver()
     {
+        boss.HealthBar.gameObject.SetActive(false);
         StartCoroutine(GameOverRoutine());
     }
     IEnumerator GameOverRoutine()

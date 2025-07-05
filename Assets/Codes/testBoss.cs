@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using System;
 
-public class FinalBoss : MonoBehaviour
+public class testBoss : MonoBehaviour
 {
     public float health = 5000f;
     public float speed = 15f;
@@ -18,43 +18,41 @@ public class FinalBoss : MonoBehaviour
     Collider2D coll;
     Scanner scanner;
     Transform nearestTarget;
-   
+    float fireTime = 5f;
+    float timer = 0f;
+    public GameObject rod;
     public GameObject HealthBar;
     public GameObject FallObject;
     public Rigidbody2D SlimeBall;
     public Rigidbody2D RigidFallObject;
-    Vector2 playerPos;
-    
+    Vector2 playerPos = new Vector2(0, 0);
+    void OnDisable()
+    {
+        Debug.LogWarning("Component bi disable!", this);
+        Debug.Log("StackTrace: " + Environment.StackTrace);
+    }
     private void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
         spriter = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         coll = GetComponent<Collider2D>();
-        scanner = GetComponent<Scanner>();
-        
-
-
+        nearestTarget = GetComponent<Scanner>().nearestTarget;
+        playerPos =nearestTarget.position;
+        Debug.Log("Player Position: " + playerPos);
+        this.enabled = true;
     }
     private void OnEnable()
     {
         target = GameManager.instance.player.GetComponent<Rigidbody2D>();
         
     }
-    private void Start()
-    {
-        UpdateNearestTarget();
-        if (nearestTarget != null)
-            playerPos = nearestTarget.position;
-    }
     void Update()
     {
-        if (!GameManager.instance.isLive || !isLive)
+        if(!GameManager.instance.isLive || !isLive)
             return;
-        UpdateNearestTarget();
-        if (nearestTarget != null)
-            playerPos = nearestTarget.position;
 
+        
     }
     private void FixedUpdate()
     {
@@ -87,21 +85,33 @@ public class FinalBoss : MonoBehaviour
             animator.SetFloat("bossJump", 1);
             if (isfire)
                 return;
-            isfire = true;
-
+            isfire = true;  
+            rod.SetActive(true);
             transform.position = new Vector2(9983, 10020);
             rigid.linearVelocity = Vector2.zero;
             Vector2 playerDir = playerPos - rigid.position;
-
-
+            
+            timer += Time.deltaTime;
+            if (timer >= fireTime)
+            {
+                timer = 0f;
+                Shoot(playerDir);
+            }
         }
 
 
     }
-    private void UpdateNearestTarget()
+   
+
+    void Phase2(Vector2 playerPos)
     {
-        if (scanner != null && scanner.nearestTarget != null)
-            nearestTarget = scanner.nearestTarget;
+        
+    }
+    
+    void Shoot(Vector2 PlayerDir)
+    {
+       SlimeBall.linearVelocity=PlayerDir.normalized * 20f;
+        isfire = false;
     }
     IEnumerator Falling()
     {

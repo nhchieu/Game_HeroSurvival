@@ -46,7 +46,7 @@ public class HUD : MonoBehaviour
             case InfoType.HealthBoss:
                 float maxhealthboss = 5000f;
                 float healthboss = GameManager.instance.boss.health;
-                mySlider.value=healthboss/maxhealthboss;
+                mySlider.value = healthboss / maxhealthboss;
                 break;
         }
     }
