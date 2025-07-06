@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
-        AudioManager.instance.BgmOn(0, bgmMenuVolume);
+       // AudioManager.instance.BgmOn(0, bgmMenuVolume);
         
     }
     
@@ -65,7 +65,7 @@ public class GameManager : MonoBehaviour
         //them 2 dieu kien de test game
       
         if (Input.GetMouseButtonDown(1)) {
-            Time.timeScale = 2;
+            Time.timeScale = 3;
         }
     }
     public void showGate()
@@ -161,6 +161,7 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(2.5f);
         transitionAnim.SetTrigger("start");
         boss.HealthBar.gameObject.SetActive(true);
+        boss.gameObject.SetActive(true);
     }
     public void QuitGame()
     {

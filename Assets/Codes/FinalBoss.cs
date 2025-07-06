@@ -51,17 +51,17 @@ public class FinalBoss : MonoBehaviour
     {
         if (!GameManager.instance.isLive || !isLive)
             return;
-        UpdateNearestTarget();
-        if (nearestTarget != null)
-            playerPos = nearestTarget.position;
+        
 
     }
     private void FixedUpdate()
     {
         if (!GameManager.instance.isLive || !isLive)
             return;
+        UpdateNearestTarget();
+        if (nearestTarget != null)
+            playerPos = nearestTarget.position;
 
-        
         Vector2 dirVec = playerPos - rigid.position;
 
         Vector2 nextVec = dirVec.normalized * speed * Time.deltaTime;

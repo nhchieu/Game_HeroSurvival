@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
     private SpriteRenderer spriter;
     private Rigidbody2D rigid;
     private Animator animator;
-    private bool canRoll = true;
+    
     private bool isRolling;
     private float rollSpeed = 30f;
     private float rollDuration = 0.55f;
@@ -81,7 +81,7 @@ public class Player : MonoBehaviour
         if (moveDirection == Vector2.zero)
             yield break;
 
-        canRoll = false;
+        
         isRolling = true;
 
 
@@ -92,7 +92,7 @@ public class Player : MonoBehaviour
         rigid.linearVelocity = Vector2.zero;
         isRolling = false;
         yield return new WaitForSeconds(rollCooldown);
-        canRoll = true;
+        
     }
 
     private void OnCollisionStay2D(Collision2D collision)
