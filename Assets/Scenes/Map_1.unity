@@ -143426,7 +143426,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5000
-  speed: 2
+  speed: 5
   target: {fileID: 87786811}
   HealthBar: {fileID: 1445901390}
   FallObject: {fileID: 1028625722}

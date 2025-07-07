@@ -70,6 +70,7 @@ public class FinalBoss : MonoBehaviour
 
         if (health <= 2500f)
         {
+            speed = 7f;
             animator.SetFloat("bossJump", dirVec.magnitude);
             if (isfalling)
                 return;
