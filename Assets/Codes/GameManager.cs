@@ -41,8 +41,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         uilevelUp.Select(1);
-        sceneName = SceneManager.GetActiveScene().name;
-        Debug.Log("Current Scene: " + sceneName);
+        
 
     }
     private void Update()
