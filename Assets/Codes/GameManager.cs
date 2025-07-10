@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
     public int exp;
     public int[] nextExp = { };
     private bool isTest = false;
+    
     private void Awake()
     {
         instance = this;
@@ -40,7 +41,9 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         uilevelUp.Select(1);
-        
+        sceneName = SceneManager.GetActiveScene().name;
+        Debug.Log("Current Scene: " + sceneName);
+
     }
     private void Update()
     {
@@ -67,6 +70,9 @@ public class GameManager : MonoBehaviour
         if (Input.GetMouseButtonDown(1)) {
             Time.timeScale = 3;
         }
+
+        
+        
     }
     public void showGate()
     {
@@ -119,7 +125,7 @@ public class GameManager : MonoBehaviour
     
     public void GameWin()
     {
-        boss.HealthBar.gameObject.SetActive(false);
+        //boss.HealthBar.gameObject.SetActive(false);
         StartCoroutine(GameWinRoutine());
     }
     IEnumerator GameWinRoutine()
@@ -135,16 +141,18 @@ public class GameManager : MonoBehaviour
     }
     public void GameOver()
     {
-        boss.HealthBar.gameObject.SetActive(false);
+        
+        //boss.HealthBar.gameObject.SetActive(false);
         StartCoroutine(GameOverRoutine());
     }
     IEnumerator GameOverRoutine()
     {
+        Debug.Log("Game Over");
         yield return new WaitForSeconds(0.5f);
         isLive = false;
         uiResult.gameObject.SetActive(true);
         uiResult.Lose();
-        transitionAnim.SetTrigger("start");
+        //transitionAnim.SetTrigger("start");
         AudioManager.instance.sfx(4);
         AudioManager.instance.PauseMusic();
         Stop();

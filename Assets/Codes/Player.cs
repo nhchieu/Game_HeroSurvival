@@ -22,6 +22,7 @@ public class Player : MonoBehaviour
     private float rollSpeed = 30f;
     private float rollDuration = 0.55f;
     private float rollCooldown = 3f;
+    private string sceneName;
 
     [SerializeField] 
     private bool isAlive => GameManager.instance.isLive;
@@ -63,6 +64,11 @@ public class Player : MonoBehaviour
         if (inputVec.x != 0)
         {
             spriter.flipX = inputVec.x < 0;
+        }
+
+        if ((sceneName.Equals("Map_2") || sceneName.Equals("Map_3")) & !scanner.nearestTarget )
+        {
+            GameManager.instance.GameWin();
         }
     }
     public void HandleRoll()
