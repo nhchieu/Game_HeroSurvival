@@ -51468,7 +51468,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
-  m_Mass: 5046
+  m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 0
@@ -51513,7 +51513,7 @@ TilemapCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -52578,9 +52578,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1156160277}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: GameRetry
+        m_MethodName: GameMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -56002,7 +56002,6 @@ Transform:
   - {fileID: 1870786089}
   - {fileID: 192187132}
   - {fileID: 1565442004}
-  - {fileID: 1715627991}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1356431834
@@ -56875,6 +56874,7 @@ Transform:
   - {fileID: 133479527}
   - {fileID: 599546205}
   - {fileID: 1896818134}
+  - {fileID: 1715627991}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1543592709
@@ -108616,7 +108616,7 @@ TilemapCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -108636,7 +108636,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
-  m_Mass: 5104
+  m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 1
@@ -108901,7 +108901,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1639901047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109532,8 +109532,8 @@ Transform:
   m_GameObject: {fileID: 1715627990}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 19.012175, y: 4.821413, z: -0.21416338}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 326252846}
@@ -109556,7 +109556,7 @@ Transform:
   - {fileID: 182091409}
   - {fileID: 31401045}
   - {fileID: 1846321755}
-  m_Father: {fileID: 1354237835}
+  m_Father: {fileID: 1475058882}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1715627992
 MonoBehaviour:
@@ -161238,7 +161238,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
-  m_Mass: 5104
+  m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 1
@@ -161283,7 +161283,7 @@ TilemapCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -162070,7 +162070,7 @@ GameObject:
   - component: {fileID: 2032218682}
   - component: {fileID: 2032218681}
   m_Layer: 5
-  m_Name: Button Quit
+  m_Name: Button Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -162156,7 +162156,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1156160277}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: QuitGame
+        m_MethodName: GameMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -162186,7 +162186,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 3198987618988995912, guid: 276d75199d489234a9b998445efbd5c2, type: 3}
+  m_Sprite: {fileID: 1212331385739854707, guid: 14b15ab5e8478f44d8415f9638a116a6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

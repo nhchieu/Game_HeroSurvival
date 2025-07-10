@@ -66,10 +66,7 @@ public class Player : MonoBehaviour
             spriter.flipX = inputVec.x < 0;
         }
 
-        if ((sceneName.Equals("Map_2") || sceneName.Equals("Map_3")) & !scanner.nearestTarget )
-        {
-            GameManager.instance.GameWin();
-        }
+        
     }
     public void HandleRoll()
     {

@@ -142725,7 +142725,7 @@ GameObject:
   - component: {fileID: 1262875335}
   - component: {fileID: 1262875334}
   m_Layer: 5
-  m_Name: Button Quit
+  m_Name: Button Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -142809,10 +142809,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1282285242}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: QuitGame
-        m_Mode: 1
+      - m_Target: {fileID: 2022821533}
+        m_TargetAssemblyTypeName: TransitionScene, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -142841,7 +142841,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 3198987618988995912, guid: 276d75199d489234a9b998445efbd5c2, type: 3}
+  m_Sprite: {fileID: 1212331385739854707, guid: 14b15ab5e8478f44d8415f9638a116a6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -163368,7 +163368,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1282285242}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: GameRetry
+        m_MethodName: GameMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -165048,6 +165048,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2022821532}
   - component: {fileID: 2022821531}
+  - component: {fileID: 2022821533}
   m_Layer: 0
   m_Name: TransitionScene
   m_TagString: Untagged
@@ -165093,6 +165094,18 @@ Transform:
   - {fileID: 549482063}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2022821533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2022821530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9c7158a3a40ac845962d4a3243d9fa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2079488346
 GameObject:
   m_ObjectHideFlags: 0

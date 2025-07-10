@@ -30,19 +30,17 @@ public class GameManager : MonoBehaviour
     public int exp;
     public int[] nextExp = { };
     private bool isTest = false;
-    
+
     private void Awake()
     {
         instance = this;
-       // AudioManager.instance.BgmOn(0, bgmMenuVolume);
-        
+        // AudioManager.instance.BgmOn(0, bgmMenuVolume);
+
     }
-    
+
     private void Start()
     {
         uilevelUp.Select(1);
-        
-
     }
     private void Update()
     {
@@ -58,19 +56,30 @@ public class GameManager : MonoBehaviour
 
         if (gameTime == maxGameTime && player.scanner.nearestTarget == null)
         {
-            if(isTest)
+            if (isTest)
             {
                 return;
             }
             showGate();
         }
-        //them 2 dieu kien de test game
-      
+
+        StartCoroutine(checkwin());
+
         if (Input.GetMouseButtonDown(1)) {
             Time.timeScale = 3;
         }
 
-        
+
+
+    }
+
+    IEnumerator checkwin()
+    {
+        yield return new WaitForSeconds(1.5f);
+        if (player.scanner.nearestTarget == null)
+        {
+            CheckWinByScanner();
+        }
         
     }
     public void showGate()
@@ -116,12 +125,24 @@ public class GameManager : MonoBehaviour
         AudioManager.instance.BgmOn(1, bgmBattleVolume);
     }
     
-    public void GameRetry()
+    public void GameMenu ()
     {
         SceneManager.LoadScene(0);
     }
-   
-    
+
+    public void CheckWinByScanner()
+    {
+        
+        string sceneName = SceneManager.GetActiveScene().name;
+
+        if ((sceneName == "Map_2" || sceneName == "Map_3") && isLive)
+        {
+            if (player != null && player.scanner != null && player.scanner.nearestTarget == null)
+            {
+                GameWin();
+            }
+        }
+    }
     public void GameWin()
     {
         //boss.HealthBar.gameObject.SetActive(false);
@@ -146,7 +167,7 @@ public class GameManager : MonoBehaviour
     }
     IEnumerator GameOverRoutine()
     {
-        Debug.Log("Game Over");
+        
         yield return new WaitForSeconds(0.5f);
         isLive = false;
         uiResult.gameObject.SetActive(true);

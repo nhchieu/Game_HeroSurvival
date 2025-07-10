@@ -1520,9 +1520,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1513694017}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: GameRetry
+        m_MethodName: GameMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -127530,7 +127530,7 @@ GameObject:
   - component: {fileID: 2136753018}
   - component: {fileID: 2136753017}
   m_Layer: 5
-  m_Name: Button Quit
+  m_Name: Button Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -127616,7 +127616,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1513694017}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: QuitGame
+        m_MethodName: GameMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
