@@ -22,13 +22,10 @@ public class Enemy : MonoBehaviour
 
     private void Awake()
     {
-
         rigid = GetComponent<Rigidbody2D>();
         spriter = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         coll = GetComponent<Collider2D>();
-
-
     }
     private void FixedUpdate()
     {

@@ -64,9 +64,4 @@ public class Gear : MonoBehaviour
             float speed = 7;
             GameManager.instance.player.speed = speed + speed * rate;
     }
-
-    void HealthUp()
-    {
-
-    }
 }

@@ -53,7 +53,7 @@ public class GameManager : MonoBehaviour
         {
             gameTime = maxGameTime;
         }
-
+        //kiem tra dk voi man 1
         if (gameTime == maxGameTime && player.scanner.nearestTarget == null)
         {
             if (isTest)
@@ -62,15 +62,12 @@ public class GameManager : MonoBehaviour
             }
             showGate();
         }
-
+        //dk man 2,3
         StartCoroutine(checkwin());
 
         if (Input.GetMouseButtonDown(1)) {
             Time.timeScale = 3;
         }
-
-
-
     }
 
     IEnumerator checkwin()

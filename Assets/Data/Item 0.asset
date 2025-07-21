@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemType: 0
   itemId: 0
-  itemName: "L\u01B0\u1EE1i h\xE1i t\u1EED th\u1EA7n"
+  itemName: "L\u01B0\u1EE1i h\xE1i "
   itemDesc: "+{0}% S\xE1t Th\u01B0\u01A1ng\nS\u1ED1 l\u01B0\u1EE3ng + {1}"
   itemIcon: {fileID: -7200311042958390934, guid: 454b58e88c0ac8245b18299c4d1975d0, type: 3}
   baseDamage: 4.5
